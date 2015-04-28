@@ -1,7 +1,3 @@
-Grab dependencies:
+Grab dependencies: `npm install`
 
-`npm install`
-
-Start server and sass watch
-
-`gulp serve`
+Start server and sass compiling: `gulp serve`
