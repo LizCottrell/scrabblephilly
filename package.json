@@ -1,0 +1,15 @@
+{
+  "name": "week-14-lecture-1-gulp",
+  "version": "1.0.0",
+  "description": "Sample Gulp file and common Gulp usage",
+  "main": "index.html",
+  "dependencies": {
+    "browser-sync": "^2.6.5",
+    "gulp": "^3.8.11",
+    "gulp-sass": "^1.3.3",
+    "gulp-watch": "^4.2.4"
+  },
+  "devDependencies": {},
+  "author": "Bill Keller, NYCDA",
+  "license": "ISC"
+}
