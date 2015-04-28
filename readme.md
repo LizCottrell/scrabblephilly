@@ -1,3 +1,3 @@
-Grab dependencies: `npm install`
+Install dependencies: `sudo npm install`
 
 Watch SASS files: `gulp sass`
