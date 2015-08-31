@@ -1,4 +1,3 @@
-
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var watch = require("gulp-watch");
@@ -6,16 +5,16 @@ var browserSync = require("browser-sync");
 var reload = browserSync.reload;
 
 gulp.task('sass', function(){
-	gulp.src('styles/scss/main.scss')
+	gulp.src('stylesheets/scss/main.scss')
 		.pipe(sass({
-			includePaths: ['styles/scss']
+			includePaths: ['stylesheets/scss']
 		}))
-		.pipe(gulp.dest("styles/."))
+		.pipe(gulp.dest("stylesheets/."))
 });
 
 gulp.task('serve', function(){
 	
-	browserSync.init(['styles/main.css','*.html', 'js/*.js'], {
+	browserSync.init(['stylesheets/main.css','*.html', 'js/*.js'], {
 		server: {
 			baseDir: './'
 		}
@@ -23,7 +22,7 @@ gulp.task('serve', function(){
 });
 
 gulp.task('watch', ['sass', 'serve'], function(){
-	gulp.watch(['styles/scss/*.scss'], ['sass']);
+	gulp.watch(['stylesheets/scss/*.scss'], ['sass']);
 })
 
 
