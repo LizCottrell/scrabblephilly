@@ -7,7 +7,8 @@ var reload = browserSync.reload;
 gulp.task('sass', function(){
 	gulp.src('stylesheets/scss/main.scss')
 		.pipe(sass({
-			includePaths: ['stylesheets/scss']
+			includePaths: ['stylesheets/scss'],
+			outputStyle: 'expanded'
 		}))
 		.pipe(gulp.dest("stylesheets/."))
 });
@@ -24,6 +25,8 @@ gulp.task('serve', function(){
 gulp.task('watch', ['sass', 'serve'], function(){
 	gulp.watch(['stylesheets/scss/*.scss'], ['sass']);
 })
+
+
 
 
 // The pipe() function reads data from a readable stream as it becomes available and writes it to a destination writable stream.
