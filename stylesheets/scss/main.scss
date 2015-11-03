@@ -3,4 +3,5 @@ $color-primary: green;
 body {
 	background-color: $color-primary;
 	border: 10px solid red;
+	background-image: ('../img/foo.jpg');
 }
