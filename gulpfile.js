@@ -11,11 +11,11 @@ gulp.task('sass', function(){
 			includePaths: ['stylesheets/scss'],
 			outputStyle: 'expanded'
 		}))
-		.pipe(gulp.dest('stylesheets/.'))
+		.pipe(gulp.dest('stylesheets/.'));
 });
 
 gulp.task('serve', function(){
-	browserSync.init(['stylesheets/main.css','*.html', 'js/*.js'], {
+	browserSync.init(['stylesheets/main.css', '*.html', 'js/*.js'], {
 		server: {
 			baseDir: './'
 		}
