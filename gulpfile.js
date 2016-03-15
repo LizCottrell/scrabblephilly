@@ -1,7 +1,7 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var watch = require("gulp-watch");
-var browserSync = require("browser-sync");
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var watch = require('gulp-watch');
+var browserSync = require('browser-sync');
 var replace = require('gulp-replace');
 var reload = browserSync.reload;
 
@@ -11,7 +11,7 @@ gulp.task('sass', function(){
 			includePaths: ['stylesheets/scss'],
 			outputStyle: 'expanded'
 		}))
-		.pipe(gulp.dest("stylesheets/."))
+		.pipe(gulp.dest('stylesheets/.'))
 });
 
 gulp.task('serve', function(){
@@ -39,7 +39,7 @@ gulp.task('buildcss', function(){
 			outputStyle: 'compressed'
 		}))
 		.pipe(replace('../img/', '/path/on/server/img/'))
-		.pipe(gulp.dest("build/."))
+		.pipe(gulp.dest('build/.'))
 });
 
 
