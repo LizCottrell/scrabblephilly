@@ -39,7 +39,7 @@ gulp.task('buildcss', function(){
 			outputStyle: 'compressed'
 		}))
 		.pipe(replace('../img/', '/path/on/server/img/'))
-		.pipe(gulp.dest('build/.'))
+		.pipe(gulp.dest('build/.'));
 });
 
 
