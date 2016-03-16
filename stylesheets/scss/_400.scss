@@ -1,0 +1,21 @@
+header {
+
+	img {
+		display: inline-block;
+		margin: 0;
+	}
+
+	p {
+		display: inline-block;
+		float: right;
+	}
+
+}
+
+.aside-info {
+	padding: $padding;
+}
+
+.details ul li.fixed.a {
+	background-size: auto;
+}

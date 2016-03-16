@@ -1,0 +1,238 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font: 100%/1.5 $lato;
+	background: #e4e4e4;
+}
+
+.wrapper {
+  display: block;
+	margin: 0 auto;
+	max-width: $page-width;
+
+	.main & {
+	}
+}
+
+/* HEADER & LOGO */
+
+header {
+
+	float: left;
+	width: 100%;
+
+	background-color: black;
+
+	.wrapper {
+
+		position: relative;
+		max-width: 58em;
+		padding: 2em;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+		max-width: 154px;
+	}
+
+	p {
+		display: block;
+		float: none;
+	  margin-top: 10px;
+	  margin-bottom: 0;	
+		
+		font-family: $lato; 
+		font-size: 1.1em;
+    line-height: 1.4em;
+    text-align: center;
+		color: #FF9900;
+	}
+
+}
+
+
+/* MAIN */
+
+.main {
+
+	float: left;
+	width: 100%;
+	padding-bottom: $padding;
+
+	font-size: 1em;
+}
+
+
+.main-info {
+    float: left;
+		background-color: white;
+		padding: 7% 5%;
+}
+
+/* PRIMARY HEADING */
+
+h1, h2 {
+	margin: 0 0 0.5em 0;
+
+	font-family: $lato;
+	font-size: 1.5em;
+	font-weight: 700;
+	line-height: 1.3em;
+
+	color: $neutral;
+}
+
+/* PARAGRAPH */
+
+p {
+	font-family: $lato;
+	font-size: 0.9em;
+	line-height: 1.6;
+
+  margin-bottom: 1em;
+}
+
+/* BUTTON */
+
+button { 
+	color: #fff;
+	font-family: $lato;
+	font-size: 1em;
+	font-weight: 400;
+	text-transform: uppercase;
+
+	width: 100%;
+	padding: 0.7em 1.4em;
+	margin: 1em 0;
+
+	background-color: $primary;
+	border: 0 solid black;
+
+	&:hover, &:focus {
+		background-color: lighten($primary, 10%);
+	}
+}
+
+.nav li button {
+	@extend button;
+
+	margin: 0;
+}
+
+/* ICONS */
+
+.icons {
+	padding: 0;
+	margin: 4% auto;
+  text-align: center;
+  float: left;
+  width: 100%;
+
+	li {
+    display: inline-block;
+		list-style-type: none;
+		text-align: center;
+		width: 80px;
+
+    .lt-ie8 & {
+      display: block;
+      float: left;
+    }
+
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+	}
+}
+
+/* ASIDES */
+
+.aside-info {
+  float: left;
+  width: 100%;
+	padding: 5%;
+	margin: 0 auto;
+}
+
+
+/* DETAILS */
+
+.blocks {
+	float: left;
+	width: 100%;
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		list-style-type: none;
+		text-align: center;
+
+		float: left;
+		overflow: hidden;
+		margin: 0 0 $swatch-margin 0;
+    position: relative;
+		
+    &.a, &.b {
+      width: 49%;
+      height: 0;
+      padding-bottom: 50%;
+    }
+
+    &.a {
+      /* bottle shop logo */
+      margin-right: $swatch-margin / 2;
+      background-color: black;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &.b { 
+      /* juggler */
+
+      margin-left: $swatch-margin / 2;
+
+      background: $secondary;
+
+      img {
+        /* dimensions: 455 x 409 */
+
+        position: absolute;
+        bottom: 0;
+        left: 7%;
+        width: 90%;
+        min-width: 220px;
+        max-width: 455px;
+      }
+    }
+
+    &.c {
+      /* happy devices */
+
+      width: 100%;
+      background: $primary;
+      padding: 2em 0;
+      text-align: center;
+
+
+      img {
+        /* dimensions: 638 x 405 */
+        max-width: 638px;
+        width: 90%;
+        .lt-ie9 & {
+        }
+      }
+    }
+	}
+}

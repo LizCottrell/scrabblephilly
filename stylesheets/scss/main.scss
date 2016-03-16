@@ -1,7 +1,23 @@
-$color-primary: green;
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:400,700);
 
-body {
-	background-color: $color-primary;
-	border: 10px solid red;
-	background-image: ('../img/foo.jpg');
+@import "variables";
+@import "reset";
+@import "mobilefirst";
+
+
+// BREAKPOINTS
+@media (min-width: 400px){
+	@import "400";
 }
+
+@media (min-width: 700px){
+	@import "700";
+}
+
+@media (min-width: 940px){
+  @import "940";
+}
+
+
+
+

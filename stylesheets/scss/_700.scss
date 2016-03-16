@@ -1,0 +1,20 @@
+.wrapper {
+	.main & {
+		position: relative;
+		margin-top: $padding / 2;
+	}
+}
+
+.main-info {
+	position: absolute;
+
+	left: $padding;
+	top: $padding;
+  padding: $padding;
+
+  max-width: 20em;
+}
+
+.aside-info {
+	padding-left: 20em + $padding * 2;
+}
