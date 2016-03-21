@@ -7,14 +7,19 @@
 
 .main-info {
 	position: absolute;
-
 	left: $padding;
 	top: $padding;
-  padding: $padding;
-
-  max-width: 20em;
+  	padding: $padding;
+  	max-width: 20em;
 }
 
-.aside-info {
+.blocks {
 	padding-left: 20em + $padding * 2;
+	min-height: 530px;
+}
+
+.blocks-wrapper {
+	&.b {  // twitter feed
+      font-size: 20vw;
+    }
 }
