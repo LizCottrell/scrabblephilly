@@ -3,6 +3,7 @@
 @import "variables";
 @import "reset";
 @import "mobilefirst";
+@import "modals";
 
 
 // BREAKPOINTS
@@ -10,8 +11,8 @@
 	@import "400";
 }
 
-@media (min-width: 700px){
-	@import "700";
+@media (min-width: 687px){
+	@import "687";
 }
 
 @media (min-width: 940px){

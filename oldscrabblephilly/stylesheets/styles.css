@@ -1,0 +1,360 @@
+/* General Style */
+body {
+	background: url(../images/background.png) top center no-repeat, url(../images/background.jpg) top center no-repeat;
+	background-size: 1000px, 100% 100%;
+	font-family: 'Lato', Arial, sans-serif;
+  	font-size: 16px;
+  	font-weight: 200;
+  	color: white;
+  	text-align: center;
+  	line-height: 1.2em;
+  	margin: 0px auto;
+  	width: 100%;
+}
+h1	{
+	font-family: 'Oswald', Arial, sans-serif;
+  	font-size: 4em;
+  	font-weight: 400;
+  	line-height: 80px;
+  	margin-bottom: 20px;
+  	text-align: center;
+  	text-shadow: 2px 2px 4px #FFCC80;
+}
+h2 {
+	font-family: 'Oswald', Arial, sans-serif;
+  	font-size: 1.8em;
+  	font-weight: 400;
+  	line-height: 50px;
+}
+a {
+	text-decoration: none;
+	font-family: 'Lato', Arial, sans-serif;
+  	font-size: 16px;
+  	font-weight: 400;
+}
+/*div {
+    border: 1px solid #000000;
+}
+
+
+
+/* Navigation = Header/Footer */
+nav {
+	height: 60px; 
+    width: 100%;
+    background: black;
+    opacity: 0.7;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+nav li {
+  	padding: 0 10px;
+  	position: relative;
+  	display: inline-block;
+  	text-align: center;
+}
+nav li a {
+  	color: #fff;
+  	margin: 0 20px;
+  	text-decoration: none;
+}
+nav li:nth-child(5) {
+	color: #FF9900;
+	bottom: -7px;
+}
+nav li a:hover {
+  	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  	color: #FFCC80;
+}
+
+
+/* Main */
+.container {
+	clear: both;	
+	width: 85%;
+	max-width: 800px;
+	height: auto;
+	background: rgb(102, 102, 102);
+	background: rgba(0, 0, 0, .5);
+	margin: 20px auto;
+	border-radius: 15px;
+	padding: 3% 5%;
+}
+.textbox {
+	width: 80%;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+
+/* Home or Landing Page */
+#home {
+	margin: 0 auto;
+	max-width: 800px;
+	text-shadow: 2px 2px 4px black;
+}
+#homeleft {
+	float: left;
+	width: 65%;
+}
+#homeright {
+	float: right;
+	width: 29%;
+	min-width: 210px;
+}
+#logo {
+	width: 500px;
+	margin: 50px auto;
+}
+#home p {
+	clear: both;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	font-weight: 400;
+	padding: 10px;	
+}
+#location img {
+	height: 175px;
+	width: 175px;
+}
+#home h2 {
+	font-size: 1.3em;
+	margin: 50px auto 20px auto;
+}
+#home a:link {
+	color: 	#FFFFFF;
+	font-size: 1.4em;
+	font-family: 'Oswald';
+  	font-weight: 400;
+  	line-height: 35px;
+  	text-shadow: 2px 2px 4px #1F0F00;
+  	margin: 15px;
+}
+#home a:visited {
+    color: #FFFFFF;
+}
+#home a:hover {
+  	color: 	#CCA3A3;
+}
+#home a:active {
+    color: #FFCCCC;
+}
+.button	{
+	clear: both;
+	margin: 20px auto 50px auto;
+	background-color: #ee432e;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee432e), color-stop(50%, #c63929), color-stop(50%, #b51700), color-stop(100%, #891100));
+	background-image: -webkit-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+	background-image: -moz-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+	background-image: -ms-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+	background-image: -o-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+	background-image: linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+	border: 1px solid #951100;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 0 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333333;
+	box-shadow: inset 0 0 0 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333333;
+	color: #fff;
+	font: bold 20px/1 "helvetica neue", helvetica, arial, sans-serif;
+	padding: 12px 0 14px 0;
+	text-align: center;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
+	width: 170px;
+}
+
+
+/* New Player Info */
+#newplayer {
+	clear: both;
+	position: relative;
+	top-margin: 50px;
+}
+#newplayer h2 {
+	text-align: left;
+	padding-left: 30%;
+	margin: 15px;
+}
+#newplayer h2:hover {
+	color: #FF9900;	
+}
+#newplayer h2:before {
+	content: url(../images/tile32.png);
+	position: relative;
+	padding-right: 30px;
+	bottom: -4px;
+}
+#newplayer p {
+	text-align: left;
+}
+
+
+
+/* FAQ+Links */
+#faq {
+	text-align: left;
+}
+#faq span {
+	font-family: 'Oswald', Arial, sans-serif;
+  	font-size: 1.2em;
+  	font-weight: 300;
+}
+#faq p:before {
+	color: #FF9900;
+  	content: '>';
+  	font-family: 'Lato';
+  	font-size: 20px;
+  	opacity: 0.5;
+  	padding-right: 10px;
+  	text-shadow: 0px 0px 2px #888;
+}
+#faq a:link {
+	color: #FFF5EB;
+	font-size: 1.2em;
+	font-weight: 400;
+	line-height: 1.2em;
+	font-family: 'Oswald';
+}
+#faq a:visited {
+    color: #DB944D;
+}
+#faq a:hover {
+  	color: #FFB84D;
+}
+#faq a:active {
+    color: #663D00;
+}
+#links li {
+	padding: 10px 0px;
+}
+#links li:before {
+	color: #FF9900;
+  	content: '>';
+  	font-family: 'Lato';
+  	font-weight: 400;
+  	font-size: 20px;
+  	opacity: 0.5;
+  	padding-right: 10px;
+  	text-shadow: 0px 0px 2px #888;
+}
+
+
+
+/* Stats */
+#stats p {
+	font-size: 1.5em;
+	margin: 100px auto;
+}
+
+
+/* Contact */
+#contact p {
+	font-size: 1.8em;
+	margin: 100px auto;
+}
+#contact a:link {
+	color: #FFFFD6;
+	font-size: 1.2em;
+	font-family: 'Oswald';
+}
+#contact a:visited {
+    color: #FF9966;
+}
+#contact a:hover {
+  	color: #FFB84D;
+}
+#contact a:active {
+    color: #0000FF;
+}
+
+
+/* Navigation = Footer */
+#bottom {
+	margin-bottom: 0;
+}
+#bottom li {
+	padding: 15px 25px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+
+
+/** Tablet view **/
+@media screen and (max-width: 780px) {
+	h1 {
+		font-size: 3em;
+	    line-height: 60px;
+	}
+	nav {
+  		height: 75px;
+	}
+	#home p {
+		font-size: 1.2em;
+	}
+	#homeleft, #homeright {
+		width: 100%;
+	}
+	#homeleft {
+		margin-top: 30px;
+	}
+	#logo {
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	#contact p {
+		font-size: 1em;
+	}
+	#bottom li {
+		padding: 20px 1%;
+	}
+}
+@media screen and (max-width: 625px) {
+	nav {
+	    float: none;
+		height: 200px;
+	    text-align: center:;
+	    font-size: 20px;
+	    font-weight: 300;
+	    margin-bottom: 0;
+	} 
+	nav li {
+	    clear: both;
+	    display: block;
+	    float: none;
+	    line-height: 1.5em;
+	  }
+	nav li a {
+	    display: block;
+	    text-align: center;
+	  }
+	#homeleft p {
+		margin: 0 auto;
+	}
+	#homeright {
+	color: black;
+	text-shadow: none;
+	}
+	#logo {
+		width: 400px;
+	}
+	#newplayer h2 {
+		padding-left: 20%;
+	}
+	#bottom li {
+		padding: 12px;
+		line-height: 1em;
+	}
+}
+
+/** Mobile view **/
+@media screen and (max-width: 480px) {
+	h1 {
+	    font-size: 2.4em;
+	}
+	#logo {
+		width: 300px;
+	}
+	#newplayer h2 {
+		padding-left: 0;
+	}
+}

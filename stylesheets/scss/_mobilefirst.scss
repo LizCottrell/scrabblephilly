@@ -10,8 +10,9 @@
 }
 
 body {
-	font: 100%/1.5 $lato;
-	background: #e4e4e4;
+	font-family: $lato;
+	background: $grey;
+	overflow: auto;
 }
 
 h1 {
@@ -24,8 +25,9 @@ h1 {
 }
 
 h2 {
-	font-size: 1em;
-	font-weight: 400;
+	@extend h1;
+	font-size: 1.25em;
+	color: $white;
 	padding: 0;
 	margin: 0;
 }
@@ -50,7 +52,7 @@ p {
 	font-family: $lato;
 	font-size: 0.9em;
 	line-height: 1.6;
-  margin-bottom: 1em;
+  	margin-bottom: 1em;
 }
 
 a {
@@ -90,6 +92,13 @@ button {
 	max-width: $page-width;
 }
 
+.divider {
+  background-color: #fff;
+  height: 1px;
+  width: 90%;
+  margin: 0 auto;
+}
+
 .hover-scale {
   transition: all 0.4s;
 
@@ -107,6 +116,7 @@ header {
 	float: left;
 	width: 100%;
 	background-color: black;
+
 
 	.wrapper {
 
@@ -139,7 +149,7 @@ header {
 
 // MAIN CONTENT //
 
-.main {
+#main {
 	float: left;
 	width: 100%;
 	font-size: 1em;
@@ -147,8 +157,8 @@ header {
 
 .main-info {
     float: left;
-		background-color: white;
-		padding: 7% 5%;
+	background-color: white;
+	padding: 7% 5%;
 }
 
 #more-info ul {
@@ -173,7 +183,7 @@ header {
 	@extend button;
 	color: $orange;
 	font-family: $lato;
-	font-size: 3em;
+	font-size: 2.7em;
 	font-weight: 700;
 	text-transform: uppercase;
 	width: 100%;
@@ -195,44 +205,11 @@ header {
 	}
 }
 
-.button-modal {
-	@extend .button;
-	padding: 0;
-	height: 30px;
-	width: 30px;
-	float: right;
-	display: block;
-}
-
-.modal-wrapper {   
-	position: fixed;
-	top:0;
-	left:0;
-	background-color: rgba(0,0,0,.6);
-	width:100%;
-	height:100%;
-	padding: 0;
-	margin: 0;
-	display: none;
-}
-
- .modal {   
-	max-width: 400px;
-	position: relative;
-	top: 50%;
-	padding: 30px;
-	margin: 0 auto;
-	background-color: white;
-	border-radius: 10px;
-	top: 50%;   
-	transform: translateY(-50%); // move up the Y axis -50%
-}
-
 
 
 // OTHER CONTENT BLOCKS //
 
-.blocks {
+#blocks {
   float: left;
   width: 100%;
 	padding: 5%;
@@ -245,23 +222,21 @@ header {
 	float: left;
 	width: 100%;
 
-	h2 {
-		font-size: 1.5em;
-		font-weight: 700;
-	}
-
 	h3 {
+		text-align: left;
 		padding: 0.3em;
 		margin: 0;
 
-		&:hover, &:focus {
+		&:hover, &:focus, &:active {
 			background-color: lighten($teal, 10%);
 			font-weight: 400;
 		}
 	}
 
 	p {
-		font-weight: 100;
+		font-weight: 400;
+		text-align: left;
+		padding: 0 10%;
 		a {
 			font-weight: 400;
 		}
@@ -285,7 +260,7 @@ header {
 		float: left;
 		width: 100%;
 		overflow: hidden;
-		margin: 0 0 $swatch-margin 0;
+		margin: 0 0 5% 0;
     position: relative;
 		
     &.a, &.b {
@@ -323,11 +298,12 @@ header {
 	}
 }
 
-#faq, #links {
+#twitter, #faq, #links {
 	ul {
 		display: none;
 	}
 }
+
 
 
 // FOOTER //
@@ -346,23 +322,29 @@ footer {
 		width: 100%;
 		padding: 0.2em 0;
 
+		p {
+			margin: 0.2em;
+			float: left;
+		}
+
 		li {
 			font-size: 2em;
 	    display: inline-block;
 			width: 40px;
 			float: right;
 			padding: 0 1em;
-
+			color: $orange;
 	    &:hover {
-	      color: $orange;
+	      color: lighten($orange, 20%);
 	    }
 		}
 
-		p {
-			margin: 0.2em;
-			float: left;
+		a {
+			color: $orange;
+			&:hover {
+	      color: lighten($orange, 20%);
+	    }
 		}
 	}
 }
-
 

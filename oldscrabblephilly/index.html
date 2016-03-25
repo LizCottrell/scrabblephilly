@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+	<head profile="http://www.scrabblephilly.com">
+		<link rel="icon" type="image/png" href="./images/p.png">
+		<title>Scrabble Philly</title>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic|Oswald:400,700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheets/reset.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  		<script>
+			$(function() {
+				$( "#newplayer .textbox ul" ).accordion({
+					active: false, 
+					collapsible: true,
+					heightStyle: "content"
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<nav id="top">
+			<ul>
+				<li><a href="#newplayer">NEW PLAYER INFO</a></li>
+				<li><a href="#faq">FAQ+LINKS</a></li>
+				<li><a href="#stats">STATS</a></li>
+				<li><a href="#contact">CONTACT US</a></li>
+				<li><p>MONDAY NIGHTS</p><p>6:30-9:30PM</p></li>
+			</ul>
+		</nav>
+		
+		<div id="home">
+			<div id="homeleft">
+				<img src="./images/logo.png" id="logo">
+				<p>Unofficial, unsanctioned and informal Scrabble Club hosted in the Passyunk Square neighborhood of South Philly.</p>
+			</div>
+			<div id="homeright">
+				<h2/>HOSTED THIS WEEK AT:</h2>
+				<a href="http://www.bottleshopbeer.com" id="location"><img src="http://www.bottleshopbeer.com/images/logo.png"></a>
+				<h1 class="button"><a href="mailto:scrabblephilly@gmail.com">RSVP</a></h1>
+			</div>
+		</div>
+
+
+		<section id="newplayer" class="container">
+			<div class="textbox">
+				<h1>NEW PLAYER INFO</h1>
+				<ul>
+					<li>
+						<h2>Basic Info</h2>
+						<p>Mondays, 6:30-9:30pm at the location listed above.  Please arrive by 6:15pm for the first game (or by 7:15 if starting with game two).<br><br>
+						We play three games per night, starting about 6:30pm, each game taking about an hour.  You choose your opponent the first round (new players will be matched appropriately); the director pairs subsequent rounds based on performance that night. You can still play the second and/or third game if you miss the first.</p>
+					</li>
+					<li>
+						<h2>Rules</h2>
+						<p>Scrabble Philly roughly follows the rules of tournament Scrabble.  Since this is a casual club used for bettering your skills, cheat sheets are allowed and you are allowed to look words up in the dictionary before playing [but no scanning the dictionary for possible words to use!].  However no electronic word generators, etc.</p>
+					</li>
+					<li>
+						<h2>Pairings</h2>
+						<p>All games are one-on-one, you chose your first opponent.  Subsquent games are paired based on scores from the first game.  If the number of players is uneven, one player may sit out.</p>
+					</li>
+					<li>
+						<h2>Equipment</h2>
+						<p>We provide boards, tiles, and a dictionary.  Bring an extra game set if you can [never hurts].  Additinoally, a chess clock app and the scrabble dictionary can be downloaded for free on your smartphone.</p>
+					</li>
+					<li>
+						<h2>The Clock</h2>
+						<p>Game clocks are used to allot 25 minutes of playing time to each player.  Clock starts when first player looks at first tile.  Neutralize clock to dispute score, call for director, during challenges, etc.  Your turn does not end until you hit your clock.</p>
+					</li>
+					<li>
+						<h2>Scoring</h2>
+						<p>You must keep track of your score and that of your opponent.  Score sheets are provided by the Club, but you may use your own if you wish.  Remember to fill out and turn in your Score Card as soon as you finish your game - player statistics are published weekly on club website.</p>
+					</li>
+					<li>
+						<h2>Improving</h2>
+						<p>The best way to improve your game is to play people who are better than you.  If you can't play with us, we recommend you play online at ISC.</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="faq" class="container">
+			<div class="textbox">
+				<h1>FAQ+LINKS</h1>
+				<ul>
+					<li>
+						<span>Where and what is the Bottle Shop?</span>
+						<p>The Bottle Shop is located at 1837 E Passyunk Ave and is a craft beer shop and eatery (eatery in the sense that you BYOfood, but there are snacks).  You can find out more at their website,</p>
+						<a href="http://www.bottleshopbeer.com" class="center">The Bottle Shop</a><br>
+					</li>
+					<li>
+						<span><br>Do I need to RSVP ahead of time?</span>
+						<p>Yes, please shoot us a quick email saying you'll make it:<br><a href="mailto:scrabblephilly@gmail.com" class="center"> scrabblephilly@gmail.com.</a></p><br>
+					</li>
+					<li>
+						<span>Does it cost anything?</span>
+						<p>It's a free community event, but purchasing from the bottle shop is most definitely encouraged.</p><br>
+					</li>
+					<li>
+						<span>How long is each game played for?</span>
+						<p>A little under an hour.  10 point penalization for going a minute overtime, and another 10 points for every minute thereafter.</p><br>
+					</li>
+					<li>
+						<span>Do I need to bring my own board?</span>
+						<p>Not necessary.</p><br>
+					</li>
+					<li>
+						<span>Can I eat during play?</span>
+						<p>Yes, you can bring food and the Bottle Shop offers many beverage options.</p><br>
+					</li>
+					<li>
+						<span>Is there an official Scrabble Club in Philadelphia?</span>
+						<p>The officially sanctioned Philadelphia club has been inactive for a while now, but an officially sanctioned all-day tournament is held in Philadelphia once a month (more information can be found on the tournament website).</p><br>
+					</li>
+				</ul>
+				<ul id="links">
+					<li>
+						<a href="http://www.isc.ro/">Internet Scrabble Club</a>
+					</li>
+					<li>
+						<a href="http://www.seattlescrabble.org/study.php">Seattle Scrabble Club Study Tools</a>
+					</li>
+					<li>
+						<a href="http://www.cross-tables.com/">Tournament Play</a>
+					</li>
+					<li>
+						<a href="http://www.scrabbleplayers.org/w/Rules">Official Tournament Rules</a>
+					</li>
+					<li>
+						<a href="http://www.scrabbleplayers.org/">North American Scrabble Players Association</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="stats" class="container">
+			<div class="textbox">
+				<h1>STATS</h1>
+				<p>Coming soon!</p>
+			</div>
+		</section>
+
+		<section id="contact" class="container">
+			<div class="textbox">
+				<h1>CONTACT US</h1>
+				<p><a href="mailto:scrabblephilly@gmail.com">scrabblephilly@gmail.com</a></p>
+			</div>
+		</section>
+
+		<nav id="bottom">
+			<ul>
+				<li><a href="#newplayer">NEW PLAYER INFO</a></li>
+				<li><a href="#faq">FAQ+LINKS</a></li>
+				<li><a href="#stats">STATS</a></li>
+				<li><a href="#contact">CONTACT US</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

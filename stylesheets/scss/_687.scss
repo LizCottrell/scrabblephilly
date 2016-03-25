@@ -6,19 +6,24 @@
 }
 
 .main-info {
-	position: absolute;
-	left: $padding;
-	top: $padding;
+	width: 40%;
+	float: left;
+	margin: $padding;
   	padding: $padding;
   	max-width: 20em;
 }
 
-.blocks {
-	padding-left: 20em + $padding * 2;
+#blocks {
+	float: left;
+	width: 50.5%;
+	padding-left: 0;
 	min-height: 530px;
 }
 
 .blocks-wrapper {
+	p {
+		font-weight: 400;
+	}
 	&.b {  // twitter feed
       font-size: 20vw;
     }

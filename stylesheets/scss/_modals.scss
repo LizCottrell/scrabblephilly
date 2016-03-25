@@ -1,0 +1,110 @@
+.modal {   
+    max-width: 400px;
+    position: relative;
+    top: 50%;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: $grey;
+    top: 50%;   
+    transform: translateY(-50%); // move up the Y axis -50%
+
+    .button-modal {
+        padding: 0;
+        height: 30px;
+        width: 30px;
+        float: right;
+        display: block;
+        margin: 0;
+    }
+
+}
+
+
+
+.modal-wrapper {   
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,.6);
+    width:100%;
+    height:100%;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.modal-content{
+    font-family: $lato, Helvetica, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 16px;
+    background: $white;
+    display: none;
+
+    &.modal-visible {
+        display: block;
+    }
+
+    h1 {
+        background: $teal;
+        padding: 20px 0;
+        font-size: 140%;
+        text-align: center;
+        color: $white;
+        margin: -16px -16px 16px -16px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="time"],
+    input[type="url"],
+    textarea,
+    select {
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: none;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        background: $white;
+        margin-bottom: 4%;
+        border: 1px solid #ccc;
+        padding: 3%;
+        color: #555;
+    
+        &:focus
+        {
+            box-shadow: 0 0 5px darken($teal, 10%);
+            padding: 3%;
+            border: 1px solid darken($teal, 10%);
+        }
+    }
+
+    input[type="submit"],
+    input[type="button"]{
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        padding: 3%;
+        background: $teal;
+        border-style: none;    
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.25em;
+        
+        &:hover{
+            background: lighten($teal, 10%);
+        }
+    }
+}

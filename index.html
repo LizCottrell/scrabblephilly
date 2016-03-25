@@ -21,17 +21,17 @@
 		</div>
 	</header>
 	
-	<div class="main">
+	<div id="main">
 		<div class="wrapper">
 
 			<section class="main-info">
-        <h1>Unofficial, unsanctioned Scrabble Club in South Philly</h1>
-        <p>Mondays 6:30-8:30 PM at the Bottle Shop. Please arrive by 6:15 for the first game or by 7:15 if starting with game two.</p>
+	      <h1>Unofficial, unsanctioned Scrabble Club in South Philly</h1>
+	      <p>Mondays 6:30-8:30 PM at the Bottle Shop. Please arrive by 6:15 for the first game or by 7:15 if starting with game two.</p>
 
-        <button id="button-rsvp" class="js-modal-open hover-scale">RSVP</button>
+	      <button id="button-rsvp" class="js-modal-open hover-scale" data-type="modal-rsvp">RSVP</button>
 
-        <div id="more-info">
-        	<button class="js-menu pickles hover-scale"><h2>MORE INFO</h2></button>
+	      <div id="more-info">
+	      	<button class="js-menu pickles hover-scale"><h2>MORE INFO</h2></button>
 	        <ul class="js-ul">
 	        	<li>
 	        		<h3>GENERAL</h3>
@@ -50,10 +50,10 @@
 	        		<p>You must keep track of your score and that of your opponent.  Score sheets are provided by the Club, but you may use your own if you wish.  Remember to fill out and turn in your Score Card as soon as you finish your game - player statistics are published weekly on club website.</p>
 	        	</li>
 	        </ul>
-        </div>
+	      </div>
 			</section>
 	
-			<section class="blocks">
+			<section id="blocks">
 				<div class="blocks-wrapper">
 					<ul>
 						<li class="a hover-scale">
@@ -61,7 +61,12 @@
 						</li>
 
 						<li class="b hover-scale">							
-							<i class="fa fa-twitter"></i>
+							<div id="twitter" class="js-animate"><i class="fa fa-twitter"></i></div>
+							<div>
+
+								<!-- add twitter feed widget-->
+							
+							</div>
 						</li>
 
 						<li class="c">						
@@ -70,7 +75,7 @@
 								<ul class="js-ul">
 									<li>
 										<h3>Where and what is the Bottle Shop?</h3>
-										<p>The Bottle Shop is a craft beer shop located at 1616 E Passyunk Ave. You can find out more at their website,	<a href="http://www.bottleshopbeer.com" class="center">The Bottle Shop</a>.</p>
+										<p>The Bottle Shop is a craft beer shop located at 1616 E Passyunk Ave. You can find out more at their website:	<a href="http://www.bottleshopbeer.com" class="center">The Bottle Shop</a></p>
 									</li>
 									<li>
 										<h3>Is there food?</h3>
@@ -102,6 +107,7 @@
 									</li>
 								</ul>
 							</div>
+							<div class="divider"></div>
 							<div id="links">
 								<button class="js-menu hover-scale"><h2>LINKS</h2></button>
 								<ul class="js-ul">
@@ -120,6 +126,9 @@
 									<li>
 										<a href="http://www.scrabbleplayers.org/">North American Scrabble Players Association</a>
 									</li>
+									<li>
+										<a href="http://www.scrabblephilly.com/oldscrabblephilly">Old Scrabble Philly</a>
+									</li>
 								</ul>
 							</div>
 						</li>
@@ -129,15 +138,25 @@
 
 			<div class="modal-wrapper">
 				<div class="modal">
-					<header class="modal-header">
-						<button class="button-modal js-modal-close">X</button>
-					</header>
-					<div class="modal-content">
-						<h2>Title of Modal</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</div>
-			</div>
+					<button class="button-modal js-modal-close hover-scale">X</button>
+							
+							<div id="modal-rsvp" class="modal-content">
+								<h2>Contact Us</h2>
+								<form>
+									<input type="text" name="field1" placeholder="Your Name" />
+									<input type="email" name="field2" placeholder="Email Address" />
+									<textarea name="field3" placeholder="Type your Message"></textarea>
+									<input type="submit" value="Send" class="hover-scale"/>
+								</form>
+							</div>
+
+							<div id="modal-map" class="modal-content">
+								<h2>Map Content</h2>
+
+							</div>
+
+				</div><!--/.modal-->
+			</div><!--/.modal-wrapper-->
 
 		</div>
 	</div>
@@ -146,8 +165,8 @@
 		<div class="wrapper">
 			<ul class="icons">
 				<p>&copy;2016</p>
-	      <li><i class="fa fa-map-marker"></i></li>
-	      <li><i class="fa fa-envelope"></i></li>
+				<li><i class="fa fa-map-marker js-modal-open" data-type="modal-map"></i></li>
+				<li><a href="mailto:scrabblephilly@gmail.com"><i class="fa fa-envelope"></i></a></li>
 	    </ul>
 	  </div>
 	</footer>
