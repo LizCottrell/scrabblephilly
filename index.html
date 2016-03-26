@@ -24,7 +24,7 @@
 	<div id="main">
 		<div class="wrapper">
 
-			<section class="main-info">
+			<section id="intro">
 	      <h1>Unofficial, unsanctioned Scrabble Club in South Philly</h1>
 	      <p>Mondays 6:30-8:30 PM at the Bottle Shop. Please arrive by 6:15 for the first game or by 7:15 if starting with game two.</p>
 
@@ -51,90 +51,111 @@
 	        	</li>
 	        </ul>
 	      </div>
-			</section>
+			</section><!--/#intro-->
 	
 			<section id="blocks">
-				<div class="blocks-wrapper">
+				<div class="wrapper">
 					<ul>
-						<li class="a hover-scale">
+						<li id="a" class="hover-scale">
 							<a href="http://bottleshopbeer.com/"><img src="images/logo-bottleshop.png" alt="The Bottle Shop 1616 E Passyunk" /></a>
-						</li>
+						</li><!--/#a-->
 
-						<li class="b hover-scale">							
+						<li id="b" class="hover-scale">							
 							<div id="twitter" class="js-animate"><i class="fa fa-twitter"></i></div>
 							<div>
 
 								<!-- add twitter feed widget-->
 							
-							</div>
-						</li>
+							</div><!--/#twitter -->
+						</li><!-- /#b-->
 
-						<li class="c">						
-							<div id="faq">
-								<button class="js-menu hover-scale"><h2>FAQ</h2></button>
-								<ul class="js-ul">
-									<li>
-										<h3>Where and what is the Bottle Shop?</h3>
-										<p>The Bottle Shop is a craft beer shop located at 1616 E Passyunk Ave. You can find out more at their website:	<a href="http://www.bottleshopbeer.com" class="center">The Bottle Shop</a></p>
-									</li>
-									<li>
-										<h3>Is there food?</h3>
-										<p>You can bring food and the Bottle Shop offers many snack &amp; beverage options.</p>
-									</li>							
-									<li>
-										<h3>Do I need to RSVP ahead of time?</h3>
-										<p>Yes, please shoot us a quick email saying you'll make it:<a href="mailto:scrabblephilly@gmail.com" class="center"> scrabblephilly@gmail.com</a></p>
-									</li>
-									<li>
-										<h3>Does it cost anything?</h3>
-										<p>It's a free community event, but purchasing from the bottle shop is encouraged.</p>
-									</li>
-									<li>
-										<h3>How long is each game played for?</h3>
-										<p>A little under an hour.  10 point penalization for going a minute overtime, and another 10 points for every minute thereafter.</p>
-									</li>
-				        	<li>
-				        		<h3>Are boards &amp; equipment provided?</h3>
-				        		<p>We provide boards, tiles, and a dictionary. A chess clock app and the scrabble dictionary can be downloaded for free on your smartphone.</p>
-				        	</li>
-									<li>
-										<h3>Is there an official Scrabble Club in Philadelphia?</h3>
-										<p>The officially sanctioned Philadelphia club has been inactive for a while now, but an officially sanctioned all-day tournament is held in Philadelphia once a month (more information can be found on the tournament website).</p>
-									</li>
-									<li>
-										<h3>How do I get better?</h3>
-										<p>The best way to improve your game is to play people who are better than you.  If you can't play with us, play online at ISC.</p>
-									</li>
-								</ul>
-							</div>
-							<div class="divider"></div>
-							<div id="links">
-								<button class="js-menu hover-scale"><h2>LINKS</h2></button>
-								<ul class="js-ul">
-									<li>
-										<a href="http://www.isc.ro/">Internet Scrabble Club</a>
-									</li>
-									<li>
-										<a href="http://www.seattlescrabble.org/study.php">Seattle Scrabble Club Study Tools</a>
-									</li>
-									<li>
-										<a href="http://www.cross-tables.com/">Tournament Play</a>
-									</li>
-									<li>
-										<a href="http://www.scrabbleplayers.org/w/Rules">Official Tournament Rules</a>
-									</li>
-									<li>
-										<a href="http://www.scrabbleplayers.org/">North American Scrabble Players Association</a>
-									</li>
-									<li>
-										<a href="http://www.scrabblephilly.com/oldscrabblephilly">Old Scrabble Philly</a>
-									</li>
-								</ul>
-							</div>
-						</li>
+						<li id="c">	
+
+							<div class="tabs">
+	              <ul class="tabs-nav">
+	                <li><button class="icon hover-scale" data-type="faq"><img src="images/icon-faq.svg" alt="FAQ"/></button></li>
+	                <li><button class="icon hover-scale" data-type="links"><img src="images/icon-link.svg" alt="Links"/></button></li>
+	                <li><button class="icon hover-scale" data-type="score"><img src="images/icon-score.svg" alt="Scores"/></button></li>
+	              </ul>
+
+	              <div class="tabs-content">
+
+									<div id="faq" class="content">
+										<button class="js-tab-close">X</button>
+										<h2>FAQ</h2>
+										<ul>
+											<li>
+												<h3>Where and what is the Bottle Shop?</h3>
+												<p>The Bottle Shop is a craft beer shop located at 1616 E Passyunk Ave. You can find out more at their website:	<a href="http://www.bottleshopbeer.com" class="center">The Bottle Shop</a></p>
+											</li>
+											<li>
+												<h3>Is there food?</h3>
+												<p>You can bring food and the Bottle Shop offers many snack &amp; beverage options.</p>
+											</li>							
+											<li>
+												<h3>Do I need to RSVP ahead of time?</h3>
+												<p>Yes, please shoot us a quick email saying you'll make it:<a href="mailto:scrabblephilly@gmail.com" class="center"> scrabblephilly@gmail.com</a></p>
+											</li>
+											<li>
+												<h3>Does it cost anything?</h3>
+												<p>It's a free community event, but purchasing from the bottle shop is encouraged.</p>
+											</li>
+											<li>
+												<h3>How long is each game played for?</h3>
+												<p>A little under an hour.  10 point penalization for going a minute overtime, and another 10 points for every minute thereafter.</p>
+											</li>
+						        	<li>
+						        		<h3>Are boards &amp; equipment provided?</h3>
+						        		<p>We provide boards, tiles, and a dictionary. A chess clock app and the scrabble dictionary can be downloaded for free on your smartphone.</p>
+						        	</li>
+											<li>
+												<h3>Is there an official Scrabble Club in Philadelphia?</h3>
+												<p>The officially sanctioned Philadelphia club has been inactive for a while now, but an officially sanctioned all-day tournament is held in Philadelphia once a month (more information can be found on the tournament website).</p>
+											</li>
+											<li>
+												<h3>How do I get better?</h3>
+												<p>The best way to improve your game is to play people who are better than you.  If you can't play with us, play online at ISC.</p>
+											</li>
+										</ul>
+									</div>
+
+									<div id="links" class="content">
+										<button class="js-tab-close">X</button>
+										<h2>LINKS</h2>
+										<ul>
+											<li>
+												<a href="http://www.isc.ro/">Internet Scrabble Club</a>
+											</li>
+											<li>
+												<a href="http://www.seattlescrabble.org/study.php">Seattle Scrabble Club Study Tools</a>
+											</li>
+											<li>
+												<a href="http://www.cross-tables.com/">Tournament Play</a>
+											</li>
+											<li>
+												<a href="http://www.scrabbleplayers.org/w/Rules">Official Tournament Rules</a>
+											</li>
+											<li>
+												<a href="http://www.scrabbleplayers.org/">North American Scrabble Players Association</a>
+											</li>
+											<li>
+												<a href="http://www.scrabblephilly.com/oldscrabblephilly">Old Scrabble Philly</a>
+											</li>
+										</ul>
+									</div>
+
+									<div id="score" class="content">
+										<button class="js-tab-close">X</button>
+										<h2>SCORES</h2>
+									    <!-- tab3 content -->
+									</div>
+
+	              </div><!-- /.tabs-content -->	
+	            </div><!-- /.tabs -->
+						</li><!--/#c-->
 					</ul>
 				</div>
-			</section>
+			</section><!--/#blocks-->
 
 			<div class="modal-wrapper">
 				<div class="modal">
@@ -151,8 +172,7 @@
 							</div>
 
 							<div id="modal-map" class="modal-content">
-								<h2>Map Content</h2>
-
+								<h2>Location</h2>
 							</div>
 
 				</div><!--/.modal-->
@@ -163,7 +183,7 @@
 
 	<footer>
 		<div class="wrapper">
-			<ul class="icons">
+			<ul class="footer-icons">
 				<p>&copy;2016</p>
 				<li><i class="fa fa-map-marker js-modal-open" data-type="modal-map"></i></li>
 				<li><a href="mailto:scrabblephilly@gmail.com"><i class="fa fa-envelope"></i></a></li>

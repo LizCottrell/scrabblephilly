@@ -81,7 +81,7 @@ $(document).on('ready', function(){
 
 
 
-	// ANIMATION //
+	// TWITTER CONTENT BLOCK ANIMATION //
 	
 	$('.js-animate').on('click', function(){
 		$('.b').animate({
@@ -93,6 +93,43 @@ $(document).on('ready', function(){
 		$('.a').hide();
 	});
 
+
+
+	// TABS
+
+    //hide all content classes.
+    $('.content').hide();
+
+    //add the click function
+    $('.tabs-nav li').click(function(){
+
+        //remove active class from previous li
+        $('.tabs-nav li').removeClass('active');
+
+        //add active class to the active li.
+        $(this).addClass('active');
+
+        //hide all content classes
+        $(".content").hide();
+        $(".tabs-nav").hide(500);
+
+        //find the data attribute of the active tab
+        var activeTab = $(this).find("button").data("type");
+
+        //fade in the content of active tab
+        $('#' + activeTab).fadeIn(500);
+
+        //close tab button
+        $('.js-tab-close').on('click', function(){
+			$('.content').fadeOut(function(){
+				$('body').removeClass('tab-on'); 
+			});
+			$(".tabs-nav").fadeIn(500);
+		});
+
+        return false;
+
+    });
 
 
 

@@ -69,34 +69,10 @@ a {
 	}
 }
 
-button { 
-	color: $white;
-	font-family: $lato;
-	font-size: 1em;
-	font-weight: 400;
-	text-transform: uppercase;
-	width: 100%;
-	padding: 0.7em 1.4em;
-	margin: 1em 0;
-	background-color: $teal;
-	border: 0 solid black;
-
-	&:hover, &:focus {
-		background-color: lighten($teal, 10%);
-	}
-}
-
 .wrapper {
   display: block;
 	margin: 0 auto;
 	max-width: $page-width;
-}
-
-.divider {
-  background-color: #fff;
-  height: 1px;
-  width: 90%;
-  margin: 0 auto;
 }
 
 .hover-scale {
@@ -112,25 +88,19 @@ button {
 // HEADER //
 
 header {
-
 	float: left;
 	width: 100%;
 	background-color: black;
-
-
 	.wrapper {
-
 		position: relative;
 		max-width: 58em;
 		padding: 2em;
 	}
-
 	img {
 		display: block;
 		margin: 0 auto;
 		max-width: 154px;
 	}
-
 	p {
 		display: block;
 		float: none;
@@ -142,7 +112,6 @@ header {
     text-align: center;
 		color: $orange;
 	}
-
 }
 
 
@@ -155,8 +124,8 @@ header {
 	font-size: 1em;
 }
 
-.main-info {
-    float: left;
+#intro {
+  float: left;
 	background-color: white;
 	padding: 7% 5%;
 }
@@ -166,7 +135,6 @@ header {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-
 	li {
 		h3:focus {
 			transition: all 0.4s;
@@ -179,130 +147,83 @@ header {
 	}
 }
 
-#button-rsvp {
-	@extend button;
-	color: $orange;
-	font-family: $lato;
-	font-size: 2.7em;
-	font-weight: 700;
-	text-transform: uppercase;
-	width: 100%;
-	padding: 0.2em 0.2em;
-	margin: 0.2em 0;
-	background-color: $white;
-	border: 2px solid $orange;
-
-	&:hover, &:focus {
-		background-color: lighten($orange, 10%);
-		border-color: lighten($orange, 10%);
-		color: $white;
-	}
-
-	&:active {
-		background-color: darken($orange, 10%);
-		border-color: darken($orange, 10%);
-		color: $white;
-	}
-}
 
 
-
-// OTHER CONTENT BLOCKS //
+// CONTENT BLOCKS //
 
 #blocks {
-  float: left;
+	float: left;
   width: 100%;
 	padding: 5%;
 	margin: 0 auto;
 	color: $white;
 	min-height: auto;
+
+	.wrapper{
+		float: left;
+		width: 100%;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+		text-align: center;
+		overflow: hidden;
+    position: relative;	
+  }
 }
 
-.blocks-wrapper {
-	float: left;
-	width: 100%;
+#a, #b {
+  width: 49%;
+  height: 0;
+  float: left;
+  padding-bottom: 50%;
+  margin-bottom: 5%;
+}
 
-	h3 {
-		text-align: left;
+#a {  // venue
+  margin-right: $swatch-margin / 2;
+  background-color: black;      
+  img {
+    width: 100%;
+  } 
+}
+
+#b {  // twitter feed
+  margin-left: $swatch-margin / 2;
+  background: $orange;
+	i {
+		font-size: 40vw;
+		color: $white;
+		padding: 0.075em 0;
+	}
+}
+
+#c {  // faq + links + score
+  width: 100%;
+  background: $teal;
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 0;
+  h3 {
 		padding: 0.3em;
 		margin: 0;
-
 		&:hover, &:focus, &:active {
 			background-color: lighten($teal, 10%);
 			font-weight: 400;
 		}
 	}
-
 	p {
 		font-weight: 400;
-		text-align: left;
 		padding: 0 10%;
 		a {
 			font-weight: 400;
 		}
 	}
-
-	button {
-		margin: 0.2em 0;
-		&:focus {
-			background-color: $orange;
-		}
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	li {
-		list-style-type: none;
-		text-align: center;
-		float: left;
-		width: 100%;
-		overflow: hidden;
-		margin: 0 0 5% 0;
-    position: relative;
-		
-    &.a, &.b {
-      width: 49%;
-      height: 0;
-      padding-bottom: 50%;
-		}
-
-    &.a {  // venue
-      margin-right: $swatch-margin / 2;
-      background-color: black;
-      
-      img {
-        width: 100%;
-      } 
-    }
-
-    &.b {  // twitter feed
-      margin-left: $swatch-margin / 2;
-      background: $orange;
-			i {
-				font-size: 40vw;
-				color: $white;
-				padding: 0.075em 0;
-			}
-    }
-
-    &.c {  // faq + links
-      width: 100%;
-      background: $teal;
-      padding: 1em;
-      text-align: center;
-      margin-bottom: 0;
-    }
-	}
 }
 
-#twitter, #faq, #links {
-	ul {
-		display: none;
-	}
-}
 
 
 
@@ -311,22 +232,17 @@ header {
 footer {
 	@extend header;
 	float: right;
-
 	.wrapper {
 		padding: 0 2em 2em;
 	}
-
-	// icons //
-	.icons {
+	.footer-icons {
 		color: $white;
 		width: 100%;
 		padding: 0.2em 0;
-
 		p {
 			margin: 0.2em;
 			float: left;
 		}
-
 		li {
 			font-size: 2em;
 	    display: inline-block;
@@ -338,7 +254,6 @@ footer {
 	      color: lighten($orange, 20%);
 	    }
 		}
-
 		a {
 			color: $orange;
 			&:hover {

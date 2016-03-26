@@ -1,11 +1,4 @@
-.wrapper {
-	.main & {
-		position: relative;
-		margin-top: $padding / 2;
-	}
-}
-
-.main-info {
+#intro {
 	width: 40%;
 	float: left;
 	margin: $padding;
@@ -18,13 +11,12 @@
 	width: 50.5%;
 	padding-left: 0;
 	min-height: 530px;
-}
-
-.blocks-wrapper {
-	p {
-		font-weight: 400;
+	.wrapper {
+		p {
+			font-weight: 400;
+		}
+		&.b {  // twitter feed
+	      font-size: 20vw;
+	    }
 	}
-	&.b {  // twitter feed
-      font-size: 20vw;
-    }
 }

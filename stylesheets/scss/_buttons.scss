@@ -1,0 +1,53 @@
+button { 
+	color: $white;
+	font-family: $lato;
+	font-size: 1em;
+	font-weight: 400;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 0.7em 1.4em;
+	margin: 1em 0;
+	background-color: $teal;
+	border: 0 solid black;
+
+	&:hover, &:focus {
+		background-color: lighten($teal, 10%);
+	}
+}
+
+#button-rsvp {
+	@extend button;
+	color: $orange;
+	font-family: $lato;
+	font-size: 2.7em;
+	font-weight: 700;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 0.2em 0.2em;
+	margin: 0.2em 0;
+	background-color: $white;
+	border: 2px solid $orange;
+
+	&:hover, &:focus {
+		background-color: lighten($orange, 10%);
+		border-color: lighten($orange, 10%);
+		color: $white;
+	}
+
+	&:active {
+		background-color: darken($orange, 10%);
+		border-color: darken($orange, 10%);
+		color: $white;
+	}
+}
+
+#blocks button {
+	margin: 0.2em 0;
+	&.icon {
+		max-width: 60%;
+	}
+	&:focus {
+		background-color: $orange;
+	}
+}
+
