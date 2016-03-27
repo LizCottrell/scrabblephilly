@@ -120,9 +120,7 @@ header {
 // MAIN CONTENT //
 
 #main {
-	float: left;
-	width: 100%;
-	font-size: 1em;
+
 }
 
 #intro {
@@ -131,7 +129,7 @@ header {
 	padding: 7% 5%;
 }
 
-#info ul {
+.intro-info ul {
 	display: none;
 	list-style-type: none;
 	margin: 0;
@@ -160,10 +158,6 @@ header {
 	color: $white;
 	min-height: auto;
 
-	.wrapper{
-		float: left;
-		width: 100%;
-	}
 	ul {
 		margin: 0;
 		padding: 0;
@@ -174,9 +168,13 @@ header {
 		overflow: hidden;
     position: relative;	
   }
+  .wrapper{
+		float: left;
+		width: 100%;
+	}
 }
 
-#a, #b {
+.half-block {
   width: 49%;
   height: 0;
   float: left;
@@ -184,8 +182,15 @@ header {
   margin-bottom: 5%;
 }
 
+.full-block {
+	width: 100%;
+  height: 550px;
+  padding: 1em;
+  margin-left: 0;
+}
+
 #a {  // venue
-  margin-right: $swatch-margin / 2;
+  margin-right: 1%;
   background-color: black;      
   img {
     width: 100%;
@@ -193,19 +198,25 @@ header {
 }
 
 #b {  // twitter feed
-  margin-left: $swatch-margin / 2;
+  margin-left: 1%;
   background: $orange;
-	i {
-		font-size: 40vw;
-		color: $white;
-		padding: 0.075em 0;
+  img {
+  	margin: 10%;
+  }
+  &:hover {
+		cursor: pointer;
+	}
+
+	#twitter {
+		padding-top: 100px;
 	}
 }
+
 
 #c {  // faq + links + score
   width: 100%;
   background: $teal;
-  padding: 1em;
+  padding: 1em 0;
   text-align: center;
   margin-bottom: 0;
   h2 {
@@ -219,10 +230,6 @@ header {
 	#tabs-nav-icons li {
 		display: inline-block;
 		width: 30%;
-		button.icon {
-			max-width: 100%;
-			padding: 10%;
-		}
 	}
 
 	#faq {
@@ -261,10 +268,18 @@ header {
 	}
 }
 
-.tabs-nav-shrink {
+
+// ANIMATIONS //
+
+.twitter-animate {
+	transition: all 1s ease;
+	width: 70px;
+  float: left;
+}
+
+.tabs-animate {
 	transition: all 1s ease;
 	width: 200px;
-  padding: 0 1em;
   float: left;
 }
 

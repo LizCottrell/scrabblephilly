@@ -11,12 +11,13 @@
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script src="js/main.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheets/animate.min.css">
 </head>
 
 <body>
 	<header>
 		<div class="wrapper">
-			<a href="http://www.scrabblephilly.com" title="Scrabble Philly"><img src="images/logo-scrabblephilly.png" alt="Scrabble Philly Logo" /></a>
+			<a href="http://www.scrabblephilly.com" title="Scrabble Philly"><img class="hover-scale animated swing" src="images/logo-scrabblephilly.png" alt="Scrabble Philly Logo" /></a>
 			<p>MONDAY NIGHTS<br />6:30-8:30PM</p>
 		</div>
 	</header>
@@ -24,13 +25,14 @@
 	<div id="main">
 		<div class="wrapper">
 
+			<!-- INTRODUCTION -->
 			<section id="intro">
 	      <h1>Unofficial, unsanctioned Scrabble Club in South Philly</h1>
 	      <p>Mondays 6:30-8:30 PM at the Bottle Shop. Please arrive by 6:15 for the first game or by 7:15 if starting with game two.</p>
 
 	      <button id="button-rsvp" class="js-modal-open hover-scale" data-type="modal-rsvp">RSVP</button>
 
-	      <div id="info">
+	      <div class="intro-info">
 	      	<button class="js-STactivate js-gameInfo hover-scale"><h2>GAME INFO</h2></button>
 	        <ul class="js-ST">
 	        	<li>
@@ -50,38 +52,50 @@
 	        		<p>You must keep track of your score and that of your opponent.  Score sheets are provided by the Club, but you may use your own if you wish.  Remember to fill out and turn in your Score Card as soon as you finish your game - player statistics are published weekly on club website.</p>
 	        	</li>
 	        </ul>
-	      </div>
+	      </div><!--/.intro-info-->
 			</section><!--/#intro-->
-	
+
+			<!-- CONTENT BLOCKS -->
 			<section id="blocks">
 				<div class="wrapper">
 					<ul>
-						<li id="a" class="hover-scale">
-							<a href="http://bottleshopbeer.com/"><img src="images/logo-bottleshop.png" alt="The Bottle Shop 1616 E Passyunk" /></a>
+
+						<!-- BLOCK A : VENUE -->
+						<li id="a" class="half-block hover-scale">
+							<a href="http://bottleshopbeer.com/" target="_blank"><img src="images/logo-bottleshop.png" alt="The Bottle Shop 1616 E Passyunk" /></a>
 						</li><!--/#a-->
 
-						<li id="b" class="hover-scale">							
-							<div id="twitter" class="js-animate"><i class="fa fa-twitter"></i></div>
-							<div>
-								<!-- twitter feed -->
-							
-							</div><!--/#twitter -->
+						<!-- BLOCK B : TWITTER -->
+						<li id="b" class="half-block hover-scale">	
+
+								<!-- TWITTER NAV -->
+	              <ul class="js-twitter-nav js-twitter-open">
+	                <li><img class="js-twitter-icon" src="images/logo-twitter.svg" alt="Twitter"/></li>
+	              </ul><!-- /.twitter-nav -->
+	              <button class="button-close js-twitter-close"><i class="fa fa-times"></i></button>
+
+	              <!-- TWITTER CONTENT -->
+	              <div id="twitter" class="js-twitter-content">			
+									<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/scrabblephilly" data-widget-id="714086572237451264">Tweets by @scrabblephilly</a>
+									<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+								</div><!-- /#twitter-->
 						</li><!-- /#b-->
 
+						<!-- BLOCK C : ADDITIONAL INFO -->
 						<li id="c">	
 
-							<div class="tabs">
-	              <ul id="tabs-nav-icons" class="tabs-nav js-tabs-nav">
+								<!-- TABS NAV -->
+	              <ul id="tabs-nav-icons" class="js-tabs-nav">
 	                <li><button class="icon hover-scale" data-type="faq"><img src="images/icon-faq.svg" alt="FAQ"/></button></li>
 	                <li><button class="icon hover-scale" data-type="links"><img src="images/icon-link.svg" alt="Links"/></button></li>
 	                <li><button class="icon hover-scale" data-type="score"><img src="images/icon-score.svg" alt="Scores"/></button></li>
 	              </ul><!-- /.tabs-nav -->
-	              <button class="button-tabs js-tab-close">X</button>
+	              <button class="button-close js-tab-close"><i class="fa fa-times"></i></button>
 
+	              <!-- TABS CONTENT -->
 	              <div class="tabs-content">
-
-									<div id="faq" class="content">
-										
+	              	<!-- FAQ -->
+									<div id="faq" class="js-tab-content">									
 										<h2>FAQ</h2>
 										<ul>
 											<li>
@@ -117,35 +131,33 @@
 												<p class="js-ST">The best way to improve your game is to play people who are better than you.  If you can't play with us, play online at ISC.</p>
 											</li>
 										</ul>
-									</div>
-
-									<div id="links" class="content">
-										
+									</div><!-- /#faq -->	
+									<!-- LINKS -->
+									<div id="links" class="js-tab-content">							
 										<h2>LINKS</h2>
 										<ul>
 											<li>
-												<a href="http://www.isc.ro/">Internet Scrabble Club</a>
+												<a href="http://www.isc.ro/" target="_blank">Internet Scrabble Club</a>
 											</li>
 											<li>
-												<a href="http://www.seattlescrabble.org/study.php">Seattle Scrabble Club Study Tools</a>
+												<a href="http://www.seattlescrabble.org/study.php" target="_blank">Scrabble Club Study Tools</a>
 											</li>
 											<li>
-												<a href="http://www.cross-tables.com/">Tournament Play</a>
+												<a href="http://www.cross-tables.com/" target="_blank">Tournament Play</a>
 											</li>
 											<li>
-												<a href="http://www.scrabbleplayers.org/w/Rules">Official Tournament Rules</a>
+												<a href="http://www.scrabbleplayers.org/w/Rules" target="_blank">Official Tournament Rules</a>
 											</li>
 											<li>
-												<a href="http://www.scrabbleplayers.org/">North American Scrabble Players Association</a>
+												<a href="http://www.scrabbleplayers.org/" target="_blank">North American Scrabble Players Association</a>
 											</li>
 											<li>
-												<a href="http://www.scrabblephilly.com/oldscrabblephilly">Old Scrabble Philly</a>
+												<a href="http://www.scrabblephilly.com/oldscrabblephilly" target="_blank">Old Scrabble Philly Website</a>
 											</li>
 										</ul>
-									</div>
-
-									<div id="score" class="content">
-										
+									</div><!-- /#links -->	
+									<!-- SCORE -->
+									<div id="score" class="js-tab-content">										
 										<h2>SCORES</h2>
 											<p>Last Week:</p>
 									    <p>
@@ -153,17 +165,18 @@
 									    	Elizabeth Cottrell: 346
 									    </p>
 									</div>
+	              </div><!-- /#score -->	
 
-	              </div><!-- /.tabs-content -->	
-	            </div><!-- /.tabs -->
 						</li><!--/#c-->
+
 					</ul>
-				</div>
+				</div><!--/.wrapper-->
 			</section><!--/#blocks-->
 
-			<div class="modal-wrapper">
+			<!-- MODALS -->
+			<div class="modal-wrapper animated fadeIn">
 				<div class="modal">
-					<button class="button-modal js-modal-close hover-scale">X</button>
+					<button class="button-close-modal js-modal-close hover-scale"><i class="fa fa-times"></i></button>
 							
 							<div id="modal-rsvp" class="modal-content">
 								<h2>Contact Us</h2>
@@ -186,8 +199,8 @@
 				</div><!--/.modal-->
 			</div><!--/.modal-wrapper-->
 
-		</div>
-	</div>
+		</div><!-- /.wrapper -->
+	</div><!-- /#main -->
 
 	<footer>
 		<div class="wrapper">
@@ -195,8 +208,8 @@
 				<p>&copy;2016</p>
 				<li><i class="fa fa-map-marker js-modal-open" data-type="modal-map"></i></li>
 				<li><a href="mailto:scrabblephilly@gmail.com"><i class="fa fa-envelope"></i></a></li>
-	    </ul>
-	  </div>
+	    </ul><!-- /.footer-icons -->
+	  </div><!-- /.wrapper -->
 	</footer>
 </body>
 </html>
