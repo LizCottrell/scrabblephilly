@@ -3,8 +3,7 @@ $(document).on('ready', function(){
 	
 	// FOOTER BOTTOM-STICK
 	
-	// make .main have a minimum height of viewport minus header + footer 
-	
+	//main area needs min-height of viewport - header - footer 
 	var footerStick = function(){
 		var viewportHeight = $('body').height();
 		var headerHeight = $('header').height();
@@ -16,7 +15,7 @@ $(document).on('ready', function(){
 	}
 
 	footerStick();
-	
+
 	$(window).on('resize', function(){
 		footerStick();
 	});
@@ -26,24 +25,25 @@ $(document).on('ready', function(){
 
 	// SLIDE-TOGGLE //
 
-	$('.js-menu').on('click', function(){     
-		$(this).parent().find('.js-ul').slideToggle();
+	$('.js-STactivate').on('click', function(){     
+		$(this).parent().find('.js-ST').slideToggle();
 
-			if ($(this).hasClass('pickles')){
-		   	if ($(this).text() == 'MORE INFO'){
+			//makes text flip for GAME INFO button
+			if ($(this).hasClass('js-gameInfo')){
+		   	if ($(this).text() == 'GAME INFO'){
 		   		$(this).text('LESS INFO');
 		   	} else {
-		   		$(this).text('MORE INFO');
+		   		$(this).text('GAME INFO');
 		   	}
 	   	}
 	}); 
 
 
 
-  // SUB-MENU ACCORDIAN //
-  
-  $(function() {
-		$(".js-ul").accordion({
+	// SUB-MENU ACCORDIAN //
+
+	$(function() {
+		$(".js-ST").accordion({
 			active: false, 
 			collapsible: true,
 			heightStyle: "content"
@@ -99,6 +99,7 @@ $(document).on('ready', function(){
 
     //hide all content classes.
     $('.content').hide();
+    $(".js-tab-close").hide();
 
     //add the click function
     $('.tabs-nav li').click(function(){
@@ -111,7 +112,6 @@ $(document).on('ready', function(){
 
         //hide all content classes
         $(".content").hide();
-        $(".tabs-nav").hide(500);
 
         //find the data attribute of the active tab
         var activeTab = $(this).find("button").data("type");
@@ -119,12 +119,18 @@ $(document).on('ready', function(){
         //fade in the content of active tab
         $('#' + activeTab).fadeIn(500);
 
+        //shrink tabs to top left corner and display close button
+        $(".js-tabs-nav").addClass('tabs-nav-shrink');
+        $(".js-tab-close").show();
+
         //close tab button
         $('.js-tab-close').on('click', function(){
 			$('.content').fadeOut(function(){
 				$('body').removeClass('tab-on'); 
 			});
+			$(".js-tabs-nav").removeClass('tabs-nav-shrink');
 			$(".tabs-nav").fadeIn(500);
+			$(".js-tab-close").hide();
 		});
 
         return false;

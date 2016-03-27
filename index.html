@@ -30,9 +30,9 @@
 
 	      <button id="button-rsvp" class="js-modal-open hover-scale" data-type="modal-rsvp">RSVP</button>
 
-	      <div id="more-info">
-	      	<button class="js-menu pickles hover-scale"><h2>MORE INFO</h2></button>
-	        <ul class="js-ul">
+	      <div id="info">
+	      	<button class="js-STactivate js-gameInfo hover-scale"><h2>GAME INFO</h2></button>
+	        <ul class="js-ST">
 	        	<li>
 	        		<h3>GENERAL</h3>
 	        		<p>We play two games per night starting at 6:30 PM, each game taking about an hour. You choose your opponent the first round and are paired the subsequent round based on performance that night. You can still play the second game if you miss the first.</p>
@@ -72,55 +72,56 @@
 						<li id="c">	
 
 							<div class="tabs">
-	              <ul class="tabs-nav">
+	              <ul id="tabs-nav-icons" class="tabs-nav js-tabs-nav">
 	                <li><button class="icon hover-scale" data-type="faq"><img src="images/icon-faq.svg" alt="FAQ"/></button></li>
 	                <li><button class="icon hover-scale" data-type="links"><img src="images/icon-link.svg" alt="Links"/></button></li>
 	                <li><button class="icon hover-scale" data-type="score"><img src="images/icon-score.svg" alt="Scores"/></button></li>
 	              </ul>
+	              <button class="button-tabs js-tab-close">X</button>
 
 	              <div class="tabs-content">
 
 									<div id="faq" class="content">
-										<button class="js-tab-close">X</button>
+										
 										<h2>FAQ</h2>
 										<ul>
 											<li>
-												<h3>Where and what is the Bottle Shop?</h3>
-												<p>The Bottle Shop is a craft beer shop located at 1616 E Passyunk Ave. You can find out more at their website:	<a href="http://www.bottleshopbeer.com" class="center">The Bottle Shop</a></p>
+												<h3 class="js-STactivate" class="js-STactivate">Where and what is the Bottle Shop?</h3>
+												<p class="js-ST">The Bottle Shop is a craft beer shop located at 1616 E Passyunk Ave. You can find out more at their website:	<a href="http://www.bottleshopbeer.com" class="center">The Bottle Shop</a></p>
 											</li>
 											<li>
-												<h3>Is there food?</h3>
-												<p>You can bring food and the Bottle Shop offers many snack &amp; beverage options.</p>
+												<h3 class="js-STactivate">Is there food?</h3>
+												<p class="js-ST">You can bring food and the Bottle Shop offers many snack &amp; beverage options.</p>
 											</li>							
 											<li>
-												<h3>Do I need to RSVP ahead of time?</h3>
-												<p>Yes, please shoot us a quick email saying you'll make it:<a href="mailto:scrabblephilly@gmail.com" class="center"> scrabblephilly@gmail.com</a></p>
+												<h3 class="js-STactivate">Do I need to RSVP ahead of time?</h3>
+												<p class="js-ST">Yes, please shoot us a quick email saying you'll make it:<a href="mailto:scrabblephilly@gmail.com" class="center"> scrabblephilly@gmail.com</a></p>
 											</li>
 											<li>
-												<h3>Does it cost anything?</h3>
-												<p>It's a free community event, but purchasing from the bottle shop is encouraged.</p>
+												<h3 class="js-STactivate">Does it cost anything?</h3>
+												<p class="js-ST">It's a free community event, but purchasing from the bottle shop is encouraged.</p>
 											</li>
 											<li>
-												<h3>How long is each game played for?</h3>
-												<p>A little under an hour.  10 point penalization for going a minute overtime, and another 10 points for every minute thereafter.</p>
+												<h3 class="js-STactivate">How long is each game played for?</h3>
+												<p class="js-ST">A little under an hour.  10 point penalization for going a minute overtime, and another 10 points for every minute thereafter.</p>
 											</li>
 						        	<li>
-						        		<h3>Are boards &amp; equipment provided?</h3>
-						        		<p>We provide boards, tiles, and a dictionary. A chess clock app and the scrabble dictionary can be downloaded for free on your smartphone.</p>
+						        		<h3 class="js-STactivate">Are boards &amp; equipment provided?</h3>
+						        		<p class="js-ST">We provide boards, tiles, and a dictionary. A chess clock app and the scrabble dictionary can be downloaded for free on your smartphone.</p>
 						        	</li>
 											<li>
-												<h3>Is there an official Scrabble Club in Philadelphia?</h3>
-												<p>The officially sanctioned Philadelphia club has been inactive for a while now, but an officially sanctioned all-day tournament is held in Philadelphia once a month (more information can be found on the tournament website).</p>
+												<h3 class="js-STactivate">Is there an official Scrabble Club in Philadelphia?</h3>
+												<p class="js-ST">The officially sanctioned Philadelphia club has been inactive for a while now, but an officially sanctioned all-day tournament is held in Philadelphia once a month (more information can be found on the tournament website).</p>
 											</li>
 											<li>
-												<h3>How do I get better?</h3>
-												<p>The best way to improve your game is to play people who are better than you.  If you can't play with us, play online at ISC.</p>
+												<h3 class="js-STactivate">How do I get better?</h3>
+												<p class="js-ST">The best way to improve your game is to play people who are better than you.  If you can't play with us, play online at ISC.</p>
 											</li>
 										</ul>
 									</div>
 
 									<div id="links" class="content">
-										<button class="js-tab-close">X</button>
+										
 										<h2>LINKS</h2>
 										<ul>
 											<li>
@@ -145,9 +146,13 @@
 									</div>
 
 									<div id="score" class="content">
-										<button class="js-tab-close">X</button>
+										
 										<h2>SCORES</h2>
-									    <!-- tab3 content -->
+											<p>Last Week:</p>
+									    <p>
+									    	Scott Zelley: 492 <br />
+									    	Elizabeth Cottrell: 346
+									    </p>
 									</div>
 
 	              </div><!-- /.tabs-content -->	
