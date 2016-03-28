@@ -3,6 +3,7 @@
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
 	box-sizing: border-box;
 	&:focus {
 		outline: none;
@@ -84,6 +85,10 @@ a {
 	}
 }
 
+.hidden {
+	display: none;
+}
+
 
 
 // HEADER //
@@ -94,8 +99,8 @@ header {
 	background-color: black;
 	.wrapper {
 		position: relative;
-		max-width: 58em;
-		padding: 2em;
+		max-width: 980px;
+		padding: $padding;
 	}
 	img {
 		display: block;
@@ -120,7 +125,7 @@ header {
 // MAIN CONTENT //
 
 #main {
-
+	clear: both;
 }
 
 #intro {
@@ -198,6 +203,8 @@ header {
 }
 
 #b {  // twitter feed
+ 	transition: height 0.5s ease-out;
+ 	transition: width 0;
   margin-left: 1%;
   background: $orange;
   img {
@@ -212,6 +219,10 @@ header {
 	}
 }
 
+.twitter-animate {
+	width: 70px;
+  float: left;
+}
 
 #c {  // faq + links + score
   width: 100%;
@@ -219,6 +230,7 @@ header {
   padding: 1em 0;
   text-align: center;
   margin-bottom: 0;
+
   h2 {
   	clear: both;
   	font-size: 3em;
@@ -268,17 +280,7 @@ header {
 	}
 }
 
-
-// ANIMATIONS //
-
-.twitter-animate {
-	transition: all 1s ease;
-	width: 70px;
-  float: left;
-}
-
 .tabs-animate {
-	transition: all 1s ease;
 	width: 200px;
   float: left;
 }

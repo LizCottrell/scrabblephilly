@@ -60,11 +60,11 @@ $(document).on('ready', function(){
 
   //add the click function
 	$('.js-twitter-open').on('click', function(){
-		$('#b').toggleClass('full-block hover-scale');
-
 		//hide venue content block
 		$('#a').hide();
 
+		$('#b').toggleClass('full-block hover-scale');
+		
 		//shrink icon, show feed and close-button
     $('.js-twitter-nav').toggleClass('twitter-animate');
     $('.js-twitter-content').show();
@@ -79,6 +79,7 @@ $(document).on('ready', function(){
 		$('#b').toggleClass('full-block hover-scale');
 		$('#a').show();		
 	});
+
 
 
 
@@ -103,7 +104,7 @@ $(document).on('ready', function(){
     var activeTab = $(this).find('button').data('type');
 
     //fade in the content of active tab
-    $('#' + activeTab).fadeIn(500);
+    $('#' + activeTab).fadeIn(600);
 
     //shrink tabs to top left corner and display close button
     $('.js-tabs-nav').addClass('tabs-animate');
@@ -127,14 +128,12 @@ $(document).on('ready', function(){
    // MODALS //
 
 	$('body').removeClass('modal-on');
-
 	
 	var modalOpen = function(whichModalToShow){
 		$('.modal-content').removeClass('modal-visible');
-		$('.modal-wrapper').show(function(){
-			$('body').addClass('modal-on'); 
-			$('#' + whichModalToShow).addClass('modal-visible');
-		});
+		$('body').addClass('modal-on'); 
+		$('#' + whichModalToShow).addClass('modal-visible');
+		$('.modal-wrapper').fadeIn(function(){}, 0);
 	};
 
 	// requires a data-type attribute on each .js-modal-open
@@ -146,9 +145,9 @@ $(document).on('ready', function(){
 
 
 	$('.js-modal-close').on('click', function(){
-		$('.modal-wrapper').hide(function(){
-			$('body').removeClass('modal-on'); 
-		});
+		$('body').removeClass('modal-on'); 
+		$('.modal-wrapper').fadeOut(function(){}, 0);
+
 	});
 
 
