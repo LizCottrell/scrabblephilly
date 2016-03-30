@@ -22,11 +22,14 @@ $(document).on('ready', function(){
 
 
 
-
 	// SLIDE-TOGGLE //
 
-	$('.js-STactivate').on('click', function(){     
-		$(this).parent().find('.js-ST').slideToggle();
+	$('.js-STactivate').on('click', function(){
+		// close any other open FAQs first
+		$(this).parent().parent('ul').find('.js-ST').slideUp();
+		
+		$(this).parent().find('> .js-ST').slideToggle();
+		$.scrollTo('.js-ST', 800);	
 
 			//makes text flip for GAME INFO button
 			if ($(this).hasClass('js-gameInfo')){
@@ -40,52 +43,9 @@ $(document).on('ready', function(){
 
 
 
-	// SUB-MENU ACCORDIAN //
-
-	$(function() {
-		$('.js-ST').accordion({
-			active: false, 
-			collapsible: true,
-			heightStyle: 'content'
-		});
-	});
-
-
-
-	// TWITTER-FEED //
-	
-	//hide all content classes
-	$('.js-twitter-content').hide();
-  $('.js-twitter-close').hide();
-
-  //add the click function
-	$('.js-twitter-open').on('click', function(){
-		//hide venue content block
-		$('#a').hide();
-
-		$('#b').toggleClass('full-block hover-scale');
-		
-		//shrink icon, show feed and close-button
-    $('.js-twitter-nav').toggleClass('twitter-animate');
-    $('.js-twitter-content').show();
-    $('.js-twitter-close').show();
-	});
-
-	//close twitter-feed button
-	$('.js-twitter-close').on('click', function(){
-		$('.js-twitter-content').hide();
-		$('.js-twitter-close').hide();
-		$('.js-twitter-nav').toggleClass('twitter-animate');
-		$('#b').toggleClass('full-block hover-scale');
-		$('#a').show();		
-	});
-
-
-
-
 	// TABS CONTENT //
 
-    //hide all content classes
+  //hide all content classes
   $('.js-tab-content').hide();
   $('.js-tab-close').hide();
 
@@ -105,6 +65,10 @@ $(document).on('ready', function(){
 
     //fade in the content of active tab
     $('#' + activeTab).fadeIn(600);
+    
+    // scrollTo ('#' + activeTab)
+    $.scrollTo('#' + activeTab, 800);
+    
 
     //shrink tabs to top left corner and display close button
     $('.js-tabs-nav').addClass('tabs-animate');
@@ -112,7 +76,8 @@ $(document).on('ready', function(){
 
     //close tab button
     $('.js-tab-close').on('click', function(){
-			$('.js-tab-content').fadeOut();
+
+			$('.js-tab-content').slideUp();
 			$('.js-tabs-nav').removeClass('tabs-animate');
 			$('.js-tabs-nav').fadeIn(500);
 			$('.js-tab-close').hide();
@@ -122,6 +87,49 @@ $(document).on('ready', function(){
 
   });
 
+
+
+// TWITTER-FEED //
+	
+	//hide all content classes
+  $('.js-twitter-content').hide();
+  $('.js-twitter-close').hide();
+
+  //add the click function
+	$('.js-twitter-open').on('click', function(){
+		// if this has a class of 'is-open', do nothing
+		if ($(this).hasClass('is-open')){
+			// alert('already open, do nothing')
+		} else {
+			// It's NOT open, go ahead and open
+			//hide venue content block
+			$('#a').hide();
+			$('#b').toggleClass('full-block hover-scale');
+			
+			//shrink icon, show feed and close-button
+	    	$('.js-twitter-nav').toggleClass('twitter-animate');
+	    	$('.js-twitter-content').show();
+	    	$('.js-twitter-close').show();
+	    	// Mark this as 'is-open'
+    		$(this).addClass('is-open');
+	    }
+	});
+
+	//close twitter-feed button
+	$('.js-twitter-close').on('click', function(){
+		// remove is-open class on close
+		$('.js-twitter-open').removeClass('is-open');
+
+		$('.js-twitter-content').hide();
+		$('.js-twitter-close').hide();
+		$('.js-twitter-nav').toggleClass('twitter-animate');
+		$('#b').toggleClass('full-block hover-scale');
+		
+		setTimeout(function(){
+			$('#a').fadeIn('slow');
+		}, 200)
+
+	});
 
 
 

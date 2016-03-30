@@ -81,7 +81,7 @@ a {
   transition: all 0.4s;
 
   &:hover {
-		transform: scale(1.03, 1.03)
+		transform: scale(1.02, 1.02)
 	}
 }
 
@@ -147,6 +147,7 @@ header {
 		}
 		p {
 			padding: 0.5em;
+			display: none;
 		}
 	}
 }
@@ -203,9 +204,10 @@ header {
 }
 
 #b {  // twitter feed
- 	transition: height 0.5s ease-out;
- 	transition: width 0;
+ 	transition: height 0.7s ease-out;
+ 	transition: width 0.2s ease-out;
   margin-left: 1%;
+  float: right;
   background: $orange;
   img {
   	margin: 10%;
