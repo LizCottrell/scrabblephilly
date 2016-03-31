@@ -166,6 +166,8 @@ $(document).on('ready', function(){
 
 	// form submit
 	$('#contact_form .submit').on('click', function(e){
+		$('#modal-rsvp').html("<div id='message'>THANKS FOR YOUR SUBMISSION</div>");
+
 		e.preventDefault();
 		name = $('input#name').val();
 		email = $('input#email').val();
@@ -177,7 +179,7 @@ $(document).on('ready', function(){
 	    url: "index.php",
 	    data: dataString,
 	    success: function() {
-	    	$('#modal-rsvp').html("<div id='message'>THANKS FOR YOUR SUBMISSION</div>");
+	    	// no needs
 	    }
 	  });
 	  return false;
