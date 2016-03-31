@@ -166,7 +166,6 @@ $(document).on('ready', function(){
 
 	// form submit
 	$('#contact_form .submit').on('click', function(e){
-		$('#modal-rsvp').html("<div id='message'>THANKS FOR YOUR SUBMISSION</div>");
 
 		e.preventDefault();
 		name = $('input#name').val();
@@ -174,6 +173,8 @@ $(document).on('ready', function(){
 		message = $('textarea#message').val();
 		dataString = 'name='+ name + '&email=' + email + '&message=' + message + '&submit=true';
 	  
+		$('#modal-rsvp').html("<div id='message'>Thank you for your RSVP! You\'ll hear back from us soon!</div>");
+
 	  $.ajax({
 	    type: "POST",
 	    url: "index.php",

@@ -4,7 +4,7 @@
     $message = $_POST['message'];
     $from = 'From: Scrabble Philly Contact'; 
     $to = 'scrabblephilly@gmail.com'; 
-    $subject = 'New Scrabble Philly Form Submission';
+    $subject = 'Scrabble Philly RSVP';
     		
     $body = "From: $name\n E-Mail: $email\n Message:\n $message";
 				
