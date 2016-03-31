@@ -164,6 +164,23 @@ $(document).on('ready', function(){
 	});
 
 
-
+	// form submit
+	$('#contact_form .submit').on('click', function(e){
+		e.preventDefault();
+		name = $('input#name').val();
+		email = $('input#email').val();
+		message = $('textarea#message').val();
+		dataString = 'name='+ name + '&email=' + email + '&message=' + message + '&submit=true';
+	  
+	  $.ajax({
+	    type: "POST",
+	    url: "index.php",
+	    data: dataString,
+	    success: function() {
+	    	$('#modal-rsvp').html("<div id='message'>THANKS FOR YOUR SUBMISSION</div>");
+	    }
+	  });
+	  return false;
+	});
 
 });  // end of doc.ready

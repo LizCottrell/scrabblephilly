@@ -10,6 +10,11 @@
 				
     if ($_POST['submit']) {				 
         if (mail ($to, $subject, $body, $from)) { 
-	    echo '<p>Your message has been sent!</p>';
+	       echo '<p>Your message has been sent!</p>';
+        } else {
+            echo 'YOU FAILED TO MAIL';
+        }
+    }else{
+        echo 'YOU FORGOT TO SUBMIT';
     }
 ?>
