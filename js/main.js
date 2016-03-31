@@ -27,18 +27,23 @@ $(document).on('ready', function(){
 	$('.js-STactivate').on('click', function(){
 		// close any other open FAQs first
 		$(this).parent().parent('ul').find('.js-ST').slideUp();
-		
-		$(this).parent().find('> .js-ST').slideToggle();
-		$.scrollTo('.js-ST', 800);	
 
-			//makes text flip for GAME INFO button
-			if ($(this).hasClass('js-gameInfo')){
-		   	if ($(this).text() == 'GAME INFO'){
-		   		$(this).text('LESS INFO');
-		   	} else {
-		   		$(this).text('GAME INFO');
-		   	}
+		if (!$(this).hasClass('is-open') || $(this).hasClass('js-gameInfo')){
+			$(this).parent().find('> .js-ST').slideToggle();
+			$.scrollTo('.js-ST', 800);
+		}
+		
+   	$(this).toggleClass('is-open');
+
+		//makes text flip for GAME INFO button
+		if ($(this).hasClass('js-gameInfo')){
+	   	if ($(this).text() == 'GAME INFO'){
+	   		$(this).text('LESS INFO');
+	   	} else {
+	   		$(this).text('GAME INFO');
 	   	}
+   	}	
+
 	}); 
 
 
