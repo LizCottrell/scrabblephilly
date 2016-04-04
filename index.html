@@ -86,9 +86,30 @@
 
 								<!-- TABS NAV -->
 	              <ul id="tabs-nav-icons" class="js-tabs-nav">
-	              <li><button class="icon blur hover-scale" data-type="faq"><img src="images/icon-faq.svg" alt="FAQ"/></button></li>
-	                <li><button class="icon blur hover-scale" data-type="links"><img src="images/icon-link.svg" alt="Links"/></button></li>
-	                <li><button class="icon blur hover-scale" data-type="score"><img src="images/icon-score.svg" alt="Scores"/></button></li>
+		              <li>
+		              	<button class="button-icon hover-scale" data-type="faq">
+			            		<img class="icon" src="images/icon-faq.svg" alt="FAQ"/>
+			            		<div class="icon-hover">
+			            			<img src="images/icon-faq-hover.svg" alt="FAQ"/>
+			            		</div>
+		          			</button>
+	          			</li>
+		              <li>
+		               	<button class="button-icon hover-scale" data-type="links">
+			               	<img class="icon" src="images/icon-link.svg" alt="Links"/>
+			               	<div class="icon-hover">
+			            			<img src="images/icon-link-hover.svg" alt="Links"/>
+			            		</div>
+			              </button>
+		              </li>
+		              <li>
+		                <button class="button-icon hover-scale" data-type="score">
+			                <img class="icon" src="images/icon-score.svg" alt="Scores"/>
+			                <div class="icon-hover">
+			            			<img src="images/icon-score-hover.svg" alt="Scores"/>
+			            		</div>
+		                </button>
+		               </li>
 	              </ul><!-- /.tabs-nav -->
 	              <button class="button-close js-tab-close"><i class="fa fa-times"></i></button>
 
@@ -173,32 +194,6 @@
 				</div><!--/.wrapper-->
 			</section><!--/#blocks-->
 
-			<!-- MODALS -->
-			<div class="modal-wrapper">
-				<div class="modal">
-					<button class="button-close-modal js-modal-close hover-scale"><i class="fa fa-times"></i></button>
-							
-							<div id="modal-rsvp" class="modal-content">
-								<h2>Contact Us</h2>
-								<form id="contact_form" enctype="multipart/form-data">
-									<input type="text" id="name" name="name" placeholder="Your Name" />
-									<input type="email" id="email" name="email" placeholder="Email Address" />
-									<textarea id="message" name="message" placeholder="Type your Message"></textarea>
-									<input type="submit" value="Send" class="hover-scale submit"/>
-								</form>
-							</div><!--/#modal-rsvp -->
-
-							<div id="modal-map" class="modal-content">
-								<h2>Location</h2>
-								<div>
-									<!-- google map -->
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.530042500956!2d-75.16631664902393!3d39.929532079323714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c60f82769ea5%3A0x5a907db2ec053268!2sThe+Bottle+Shop!5e0!3m2!1sen!2sus!4v1459390913767" width="300" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-								</div>
-							</div><!--/#modal-map -->
-
-				</div><!--/.modal-->
-			</div><!--/.modal-wrapper-->
-
 		</div><!-- /.wrapper -->
 	</div><!-- /#main -->
 
@@ -211,5 +206,31 @@
 	    </ul><!-- /.footer-icons -->
 	  </div><!-- /.wrapper -->
 	</footer>
+
+	<!-- MODALS -->
+	<div class="modal-wrapper">
+		<div class="modal">
+			<button class="button-close-modal js-modal-close hover-scale"><i class="fa fa-times"></i></button>
+					
+					<div id="modal-rsvp" class="modal-content">
+						<h2>Contact Us</h2>
+						<form id="contact_form" enctype="multipart/form-data">
+							<input type="text" id="name" name="name" placeholder="Your Name" />
+							<input type="email" id="email" name="email" placeholder="Email Address" />
+							<textarea id="message" name="message" placeholder="Type your Message"></textarea>
+							<input type="submit" value="Send" class="hover-scale submit"/>
+						</form>
+					</div><!--/#modal-rsvp -->
+
+					<div id="modal-map" class="modal-content">
+						<h2>Location</h2>
+						<div>
+							<!-- google map -->
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.530042500956!2d-75.16631664902393!3d39.929532079323714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c60f82769ea5%3A0x5a907db2ec053268!2sThe+Bottle+Shop!5e0!3m2!1sen!2sus!4v1459390913767" max-width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div><!--/#modal-map -->
+
+		</div><!--/.modal-->
+	</div><!--/.modal-wrapper-->
 </body>
 </html>
