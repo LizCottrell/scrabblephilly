@@ -6,3 +6,19 @@
 	width: 59%;
 }
 
+#blocks button {
+	margin: 0.2em 0;
+	
+	&.button-icon {
+		&:hover {
+			.icon {
+				transition: all 0.3s ease;
+				opacity: 0;
+			}
+			.icon-hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+

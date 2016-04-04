@@ -38,7 +38,7 @@ h3 {
 	color: $white;
 	padding: 0;
 	margin: 0;
-	font-weight: 400;
+	font-weight: 700;
 	text-align: center;
 	padding: 0.7em 1.4em;
 	background-color: $teal;
@@ -46,7 +46,6 @@ h3 {
 
 	&:hover, &:focus {
 		background-color: lighten($teal, 10%);
-		font-weight: 400;
 	}
 }
 

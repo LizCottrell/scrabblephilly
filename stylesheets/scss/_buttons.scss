@@ -48,16 +48,6 @@ button {
 		max-width: 100%;
 		padding: 10%;
 		position: relative;
-		
-		&:hover {
-			.icon {
-				transition: all 0.3s ease;
-				opacity: 0;
-			}
-			.icon-hover {
-				opacity: 1;
-			}
-		}
 
 		.icon-hover {
 			position: absolute;
@@ -81,10 +71,6 @@ button {
 
 	&:focus {
 		background-color: $orange;
-	}
-
-	&:hover {
-		background-color: none;
 	}
 }
 

@@ -93,22 +93,7 @@ $(document).on('ready', function(){
   });
 
 
-// ICON HOVER OVERLAY //
-// function toggleOverlay(){
-// 	var overlay = document.getElementById('overlay');
-// 	var specialBox = document.getElementById('specialBox');
-// 	overlay.style.opacity = .8;
-// 	if(overlay.style.display == "block"){
-// 		overlay.style.display = "none";
-// 		specialBox.style.display = "none";
-// 	} else {
-// 		overlay.style.display = "block";
-// 		specialBox.style.display = "block";
-// 	}
-// }
-
-
-// TWITTER-FEED //
+	// TWITTER-FEED //
 	
 	//hide all content classes
   $('.js-twitter-content').hide();
@@ -145,7 +130,7 @@ $(document).on('ready', function(){
 		$('#b').toggleClass('full-block hover-scale');
 		
 		setTimeout(function(){
-			$('#a').fadeIn('slow');
+			$('#a').show();
 		}, 200)
 
 	});
